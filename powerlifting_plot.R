@@ -63,3 +63,5 @@ ggplot(plot_data, aes(x = date, y = weight, color = set, group = set)) +
     #strip.background = element_rect(fill = "white", color = "gray90"),
     plot.title.position = "plot"
   )
+
+ggsave("powerlifting_plot.png", width = 7)
