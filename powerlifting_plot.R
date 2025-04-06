@@ -64,4 +64,4 @@ ggplot(plot_data, aes(x = date, y = weight, color = set, group = set)) +
     plot.title.position = "plot"
   )
 
-ggsave("powerlifting_plot.png", width = 7, bg = "white")
+ggsave("powerlifting_plot.png", width = 7, height = 5, bg = "white")
