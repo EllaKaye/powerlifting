@@ -7,8 +7,10 @@ lifting_data <- read_csv("powerlifting_tracker.csv", col_types = "Dccidc")
 
 # Plot data
 plot_data <- lifting_data |>
-  filter(set != "one_rep") |>
+  filter(!(set %in% c("one_rep", "two_rep", "heavy_4"))) |>
   filter(!is.na(weight)) |>
+  filter(date != as.Date("2024-11-14")) |> # PT session is different
+  filter(date != as.Date("2024-12-11")) |> # PT session is different
   mutate(
     lift = factor(lift, levels = c("squat", "benchpress", "deadlift"))
   ) |>

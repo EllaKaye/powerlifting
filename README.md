@@ -1,5 +1,5 @@
 # Keeping track of my powerlifting progress.
 
-Plot up to 2024-04-03
+Plot up to 2025-04-06
 
 ![](powerlifting_plot.png)
