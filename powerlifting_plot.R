@@ -73,7 +73,7 @@ ggplot(plot_data, aes(x = date, y = weight, color = set, group = set)) +
 ggsave(
   "powerlifting_plot.png",
   width = 9,
-  height = 8,
+  height = 7,
   bg = "white",
   device = agg_png,
   res = 320,
