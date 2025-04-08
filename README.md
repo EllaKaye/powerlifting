@@ -20,13 +20,13 @@ I will measure these again in May 2025 (I already know I'm much stronger now).
 
 My short/medium-term goals:
 
-Squat: 80kg
-Benchpress: 50kg
-Deadlift: 100kg
+- squat: 80kg
+- benchpress: 50kg
+- deadlift: 100kg
 
 My long-term/lifetime goals:
 
-Squat: 90kg
-Benchpress: 60kg
-Deadlift: 120kg
+- squat: 90kg
+- benchpress: 60kg
+- deadlift: 120kg
 
