@@ -3,7 +3,8 @@ library(dplyr)
 library(readr)
 library(ggtext)
 library(ragg)
-#library(marquee)
+#library(marquee) #currently causing R to crash but would like to return to
+# using marquee when I can figure out what's going on with this.
 
 # Data
 lifting_data <- read_csv("powerlifting_tracker.csv", col_types = "Dccidc")
@@ -42,32 +43,42 @@ ggplot(plot_data, aes(x = date, y = weight, color = set, group = set)) +
   facet_wrap(~lift, ncol = 1, strip.position = "top", scale = "free_y") +
   labs(
     title = "Powerlifting Progress Tracker",
-    subtitle = "Weight (kg) lifted in each set (reps): **<span style = 'color:#6AD400;'>bar (10)</span>**, **<span style = 'color:#00D46A;'>light (8)</span>**, **<span style = 'color:#D46A00;'>medium (6)</span>**, **<span style = 'color:#006AD4;'>heavy 1 (3)</span>**, **<span style = 'color:#6A00D4;'>heavy 2 (3)</span>**, and **<span style = 'color:#D4006A;'>heavy 3 (3)</span>**",
+    subtitle = "Weight (kg) lifted in each set (reps)<br>
+      **<span style = 'color:#6AD400;'>bar (10)</span>**, 
+      **<span style = 'color:#00D46A;'>light (8)</span>**, 
+      **<span style = 'color:#D46A00;'>medium (6)</span>**, 
+      **<span style = 'color:#006AD4;'>heavy 1 (3)</span>**, 
+      **<span style = 'color:#6A00D4;'>heavy 2 (3)</span>**, 
+      **<span style = 'color:#D4006A;'>heavy 3 (3)</span>**",
     color = NULL
   ) +
   scale_color_manual(values = set_colours) +
+  scale_x_date(date_labels = "%b\n%Y") +
   theme_minimal() +
   theme(
     legend.position = "none",
     axis.title.x = element_blank(),
     axis.title.y = element_blank(),
-    strip.text = element_text(size = 14, hjust = 0, face = "bold"), # Left-align the strip text
+    strip.text = element_text(size = 14, hjust = 0.5, face = "bold"),
     #strip.background = element_rect(fill = "white", color = "gray90"),
     text = element_text(family = "LEMON MILK Pro"),
     panel.spacing = unit(2, "lines"),
-    plot.title.position = "plot",
+    panel.grid.minor = element_blank(),
+    panel.grid.major = element_line(colour = "#FFF4F9"),
     plot.title = element_text(
       size = 20,
       margin = margin(6, 0, 12, 0),
-      face = "bold"
+      face = "bold",
+      hjust = 0.5
     ),
     #plot.subtitle = marquee::element_marquee(),
     plot.subtitle = element_textbox_simple(
-      size = 10.5,
+      size = 12,
       margin = margin(0, 0, 12, 0),
-      lineheight = 1.3
+      lineheight = 1.7,
+      halign = 0.5
     ),
-    plot.margin = margin(rep(18, 4))
+    plot.margin = margin(rep(24, 4))
   )
 
 ggsave(
