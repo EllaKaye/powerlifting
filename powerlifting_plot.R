@@ -1,6 +1,8 @@
 library(ggplot2)
 library(dplyr)
 library(readr)
+#library(marquee)
+library(ggtext)
 
 # Data
 lifting_data <- read_csv("powerlifting_tracker.csv", col_types = "Dccidc")
@@ -21,49 +23,95 @@ plot_data <- lifting_data |>
     )
   )
 
-# Labels for legend
-custom_labels <- c(
-  "bar (10)",
-  "light (8)",
-  "medium (6)",
-  "heavy 1 (3)",
-  "heavy 2 (3)",
-  "heavy 3 (3)"
+set_colours <- c(
+  bar = "#6AD400",
+  light = "#00D46A",
+  medium = "#D46A00",
+  heavy_1 = "#006AD4",
+  heavy_2 = "#6A00D4",
+  heavy_3 = "#D4006A"
 )
 
-# Custom function to add kg to axis labels
-# add_kg <- function(x) {
-#   paste(x, "kg")
-# }
+subtitle_marquee <- "Weight (kg) lifted in each set (reps): **{#6AD400 bar (10)}**, **{#00D46A light (8)}**, **{#D46A00 medium (6)}**, **{#006AD4 heavy 1 (3)}**, **{#6A00D4 heavy 2 (3)}**, and **{#D4006A heavy 3 (3)}**."
 
 # Create the faceted plot
 ggplot(plot_data, aes(x = date, y = weight, color = set, group = set)) +
   geom_line() +
   geom_point() +
-  #facet_grid(lift ~ ., scales = "free_y") +
   facet_wrap(~lift, ncol = 1, strip.position = "top", scale = "free_y") +
   labs(
     title = "Powerlifting Progress Tracker",
-    subtitle = "Weight in kg. Legend shows set and reps.",
+    subtitle = "Weight (kg) lifted in each set (reps): **<span style = 'color:#6AD400;'>bar (10)</span>**, **{#00D46A light (8)}**, **{#D46A00 medium (6)}**, **{#006AD4 heavy 1 (3)}**, **{#6A00D4 heavy 2 (3)}**, and **{#D4006A heavy 3 (3)}**.",
     color = NULL
   ) +
-  scale_color_discrete(labels = custom_labels) +
-  # scale_y_continuous(labels = add_kg) +
-  # guides(
-  #   color = guide_legend(
-  #     nrow = 2,
-  #     byrow = TRUE
-  #   )
-  # ) +
+  scale_color_manual(values = set_colours) +
   theme_minimal() +
   theme(
-    # legend.position = "top",
-    # axis.text.x = element_text(angle = 45, hjust = 1),
+    legend.position = "none",
     axis.title.x = element_blank(),
     axis.title.y = element_blank(),
-    strip.text = element_text(size = 11, hjust = 0), # Left-align the strip text
+    strip.text = element_text(size = 14, hjust = 0, face = "bold"), # Left-align the strip text
     #strip.background = element_rect(fill = "white", color = "gray90"),
-    plot.title.position = "plot"
+    text = element_text(family = "figtree"),
+    plot.title.position = "plot",
+    plot.title = element_text(size = 20, margin = margin(6, 0, 12, 0)),
+    #plot.subtitle = marquee::element_marquee(),
+    plot.subtitle = element_textbox_simple(
+      margin = margin(0, 0, 12, 0),
+      lineheight = 1.3
+    ),
+    plot.margin = margin(rep(18, 4))
   )
 
-ggsave("powerlifting_plot.png", width = 7, height = 5, bg = "white")
+ggsave("powerlifting_plot.png", width = 8, height = 6, bg = "white")
+
+total_weight <- lifting_data |>
+  filter(!(set %in% c("one_rep", "two_rep", "heavy_4"))) |>
+  filter(!is.na(weight)) |>
+  filter(date != as.Date("2024-11-14")) |> # PT session is different
+  filter(date != as.Date("2024-12-11")) |> # PT session is different
+  summarise(total = sum(weight), .by = date)
+
+ggplot(total_weight, aes(date, total)) +
+  geom_point() +
+  geom_line() +
+  theme_minimal()
+
+lift_data <- lifting_data |>
+  filter(!is.na(weight)) |>
+  filter(date != as.Date("2024-11-14")) |> # PT session is different
+  filter(date != as.Date("2024-12-11")) |> # PT session is different
+  summarise(total = sum(weight), .by = c(date, lift)) |>
+  mutate(
+    lift = factor(lift, levels = c("deadlift", "benchpress", "squat"))
+  )
+
+lift_colours <- c(
+  a = "#6AD400",
+  b = "#00D46A",
+  c = "#D46A00",
+  squat = "#006AD4",
+  benchpress = "#6A00D4",
+  deadlift = "#D4006A"
+)
+
+ggplot(lift_data, aes(date, total)) +
+  geom_bar(aes(fill = lift), stat = "identity") +
+  scale_color_manual(values = lift_colours) +
+  theme_minimal() +
+  theme(
+    #legend.position = "none",
+    axis.title.x = element_blank(),
+    axis.title.y = element_blank(),
+    strip.text = element_text(size = 14, hjust = 0, face = "bold"), # Left-align the strip text
+    #strip.background = element_rect(fill = "white", color = "gray90"),
+    text = element_text(family = "figtree"),
+    plot.title.position = "plot",
+    plot.title = element_text(size = 20, margin = margin(6, 0, 12, 0)),
+    #plot.subtitle = element_marquee(width = 1),
+    plot.subtitle = element_textbox_simple(
+      margin = margin(0, 0, 12, 0),
+      lineheight = 1.3
+    ),
+    plot.margin = margin(rep(18, 4))
+  )
