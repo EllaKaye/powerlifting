@@ -55,5 +55,5 @@ git2r::add(
   )
 )
 
-git2r::commit(message = "Add git workflow test 2")
-git2r::push("origin", "refs/heads/main")
+git2r::commit(message = "Add git workflow test 3")
+system("git push")
