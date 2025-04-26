@@ -4,7 +4,7 @@ library(ragg)
 source("powerlifting_helpers.R")
 
 # TODO: update date
-date <- "2025-04-27"
+date <- "Only use system for git part of workflow"
 
 # TODO: update weight and maybe reps and note
 # fmt: skip
@@ -47,13 +47,6 @@ create_powerlifting_plot(plot_data)
 save_powerlifting_plot() # a wrapper to ggsave
 
 # git workflow
-git2r::add(
-  path = c(
-    "powerlifting_workflow.R",
-    "powerlifting_tracker.csv",
-    "powerlifting_plot.png"
-  )
-)
-
-git2r::commit(message = "Add git workflow test 3")
+system("git add .")
+system(paste0('git commit -m "', date, '"'))
 system("git push")
