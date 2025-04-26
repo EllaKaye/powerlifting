@@ -45,3 +45,14 @@ write_csv(latest_data, "powerlifting_tracker.csv", na = "", append = TRUE)
 plot_data <- prep_data_for_plot(lifting_data)
 create_powerlifting_plot(plot_data)
 save_powerlifting_plot() # a wrapper to ggsave
+
+# git workflow
+git2r::add(
+  path = c(
+    "powerlifting_workflow.R",
+    "powerlifting_tracker.csv",
+    "powerlifting_plot.png"
+  )
+)
+
+git2r::commit(message = date)
