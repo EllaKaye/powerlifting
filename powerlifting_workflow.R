@@ -55,4 +55,5 @@ git2r::add(
   )
 )
 
-git2r::commit(message = date)
+git2r::commit(message = "Add git workflow test 2")
+git2r::push("origin", "refs/heads/main")
