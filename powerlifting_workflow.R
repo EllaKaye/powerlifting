@@ -4,7 +4,7 @@ library(ragg)
 source("powerlifting_helpers.R")
 
 # TODO: update date
-date <- "Only use system for git part of workflow"
+date <- "2025-04-27"
 
 # TODO: update weight and maybe reps and note
 # fmt: skip
@@ -15,27 +15,23 @@ latest_lifts <- tibble::tribble(
   "squat", "medium", 6L, 50, NA, 
   "squat", "heavy_1", 3L, 60, NA,
   "squat", "heavy_2", 3L, 65, NA,
-  "squat", "heavy_3", 3L, 70, "pb",
+  "squat", "heavy_3", 2L, 70, "probably could have done 3",
   "benchpress", "bar", 10L, 20, NA, 
   "benchpress", "light", 8L, NA, NA, 
   "benchpress", "medium", 6L, 30, NA, 
   "benchpress", "heavy_1", 3L, 35, NA,
-  "benchpress", "heavy_2", 3L, 37.5, NA,
-  "benchpress", "heavy_3", 3L, 38, NA,
+  "benchpress", "heavy_2", 3L, 35, NA,
+  "benchpress", "heavy_3", 2L, 37.5, NA,
   "deadlift", "bar", 10L, NA, NA, 
   "deadlift", "light", 8L, 50L, NA, 
   "deadlift", "medium", 6L, 60L, NA, 
-  "deadlift", "heavy_1", 3L, 80L, NA,
+  "deadlift", "heavy_1", 3L, 70L, NA,
   "deadlift", "heavy_2", 3L, 80L, NA,
-  "deadlift", "heavy_3", 3L, 80L, NA
+  "deadlift", "heavy_3", 3L, NA, NA
 )
 
 latest_data <- cbind(date = as.Date(date), latest_lifts)
-
-# read in previous data
 previous_data <- read_csv("powerlifting_tracker.csv", col_types = "Dccidc")
-
-# append latest data
 lifting_data <- rbind(previous_data, latest_data)
 
 # append latest data to csv
@@ -47,6 +43,8 @@ create_powerlifting_plot(plot_data)
 save_powerlifting_plot() # a wrapper to ggsave
 
 # git workflow
-system("git add .")
+system(
+  "git add powerlifting_workflow.R powerlifting_plot.png powerlifting_tracker.csv"
+)
 system(paste0('git commit -m "', date, '"'))
 system("git push")
