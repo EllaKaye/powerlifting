@@ -48,3 +48,6 @@ system(
 )
 system(paste0('git commit -m "', date, '"'))
 system("git push")
+
+# check
+usethis::browse_github()
