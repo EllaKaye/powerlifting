@@ -4,7 +4,7 @@ library(ragg)
 source("powerlifting_helpers.R")
 
 # TODO: update date
-date <- "2025-04-27"
+date <- "2025-05-04"
 
 # TODO: update weight and maybe reps and note
 # fmt: skip
@@ -15,13 +15,13 @@ latest_lifts <- tibble::tribble(
   "squat", "medium", 6L, 50, NA, 
   "squat", "heavy_1", 3L, 60, NA,
   "squat", "heavy_2", 3L, 65, NA,
-  "squat", "heavy_3", 2L, 70, "probably could have done 3",
+  "squat", "heavy_3", 3L, 70, "weight moving OK but need to get a bit deeper",
   "benchpress", "bar", 10L, 20, NA, 
-  "benchpress", "light", 8L, NA, NA, 
+  "benchpress", "light", 8L, 25, NA, 
   "benchpress", "medium", 6L, 30, NA, 
   "benchpress", "heavy_1", 3L, 35, NA,
-  "benchpress", "heavy_2", 3L, 35, NA,
-  "benchpress", "heavy_3", 2L, 37.5, NA,
+  "benchpress", "heavy_2", 3L, 37.5, NA,
+  "benchpress", "heavy_3", 3L, NA, NA,
   "deadlift", "bar", 10L, NA, NA, 
   "deadlift", "light", 8L, 50L, NA, 
   "deadlift", "medium", 6L, 60L, NA, 
