@@ -3,7 +3,7 @@ library(dplyr)
 library(readr)
 library(ggtext)
 library(ragg)
-#library(marquee) #currently causing R to crash but would like to return to
+library(marquee) #currently causing R to crash but would like to return to
 # using marquee when I can figure out what's going on with this.
 
 # Data
@@ -34,7 +34,8 @@ set_colours <- c(
   heavy_3 = "#D4006A"
 )
 
-#subtitle_marquee <- "Weight (kg) lifted in each set (reps): **{#6AD400 bar (10)}**, **{#00D46A light (8)}**, **{#D46A00 medium (6)}**, **{#006AD4 heavy 1 (3)}**, **{#6A00D4 heavy 2 (3)}**, and **{#D4006A heavy 3 (3)}**."
+subtitle_marquee <- "Weight (kg) lifted in each set (reps)  
+**{#6AD400 bar (10)}**, **{#00D46A light (8)}**, **{#D46A00 medium (6)}**, **{#006AD4 heavy 1 (3)}**, **{#6A00D4 heavy 2 (3)}**, and **{#D4006A heavy 3 (3)}**."
 
 # Create the faceted plot
 ggplot(plot_data, aes(x = date, y = weight, color = set, group = set)) +
@@ -43,13 +44,14 @@ ggplot(plot_data, aes(x = date, y = weight, color = set, group = set)) +
   facet_wrap(~lift, ncol = 1, strip.position = "top", scale = "free_y") +
   labs(
     title = "Powerlifting Progress Tracker",
-    subtitle = "Weight (kg) lifted in each set (reps)<br>
-      **<span style = 'color:#6AD400;'>bar (10)</span>**, 
-      **<span style = 'color:#00D46A;'>light (8)</span>**, 
-      **<span style = 'color:#D46A00;'>medium (6)</span>**, 
-      **<span style = 'color:#006AD4;'>heavy 1 (3)</span>**, 
-      **<span style = 'color:#6A00D4;'>heavy 2 (3)</span>**, 
-      **<span style = 'color:#D4006A;'>heavy 3 (3)</span>**",
+    # subtitle = "Weight (kg) lifted in each set (reps)<br>
+    #   **<span style = 'color:#6AD400;'>bar (10)</span>**,
+    #   **<span style = 'color:#00D46A;'>light (8)</span>**,
+    #   **<span style = 'color:#D46A00;'>medium (6)</span>**,
+    #   **<span style = 'color:#006AD4;'>heavy 1 (3)</span>**,
+    #   **<span style = 'color:#6A00D4;'>heavy 2 (3)</span>**,
+    #   **<span style = 'color:#D4006A;'>heavy 3 (3)</span>**",
+    subtitle = subtitle_marquee,
     color = NULL
   ) +
   scale_color_manual(values = set_colours) +
@@ -71,18 +73,23 @@ ggplot(plot_data, aes(x = date, y = weight, color = set, group = set)) +
       face = "bold",
       hjust = 0.5
     ),
-    #plot.subtitle = marquee::element_marquee(),
-    plot.subtitle = element_textbox_simple(
+    plot.subtitle = marquee::element_marquee(
       size = 12,
       margin = margin(0, 0, 12, 0),
-      lineheight = 1.7,
-      halign = 0.5
+      lineheight = 1.2,
+      hjust = 0.5
     ),
+    # plot.subtitle = element_textbox_simple(
+    #   size = 12,
+    #   margin = margin(0, 0, 12, 0),
+    #   lineheight = 1.7,
+    #   halign = 0.5
+    # ),
     plot.margin = margin(rep(24, 4))
   )
 
 ggsave(
-  "powerlifting_plot.png",
+  "powerlifting_plot_marquee.png",
   width = 9,
   height = 7,
   bg = "white",
