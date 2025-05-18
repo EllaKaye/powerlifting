@@ -4,7 +4,7 @@ library(ragg)
 source("powerlifting_helpers.R")
 
 # TODO: update date
-date <- "2025-05-11"
+date <- "2025-05-18"
 
 # TODO: update weight and maybe reps and note
 # fmt: skip
@@ -15,19 +15,19 @@ latest_lifts <- tibble::tribble(
   "squat", "medium", 6L, 50, NA, 
   "squat", "heavy_1", 3L, 60, NA,
   "squat", "heavy_2", 3L, 65, NA,
-  "squat", "heavy_3", 3L, 70, "weight and depth good",
+  "squat", "heavy_3", 3L, 70, "felt hard",
   "benchpress", "bar", 10L, 20, NA, 
   "benchpress", "light", 8L, 25, NA, 
   "benchpress", "medium", 6L, 30, NA, 
   "benchpress", "heavy_1", 3L, 35, NA,
-  "benchpress", "heavy_2", 3L, 37.5, NA,
-  "benchpress", "heavy_3", 3L, 37.5, NA,
+  "benchpress", "heavy_2", 1L, 40, NA,
+  "benchpress", "heavy_3", 3L, NA, NA,
   "deadlift", "bar", 10L, NA, NA, 
   "deadlift", "light", 8L, 50, NA, 
   "deadlift", "medium", 6L, 60, NA, 
   "deadlift", "heavy_1", 3L, 70, NA,
   "deadlift", "heavy_2", 3L, 80, NA,
-  "deadlift", "heavy_3", 3L, 80, NA
+  "deadlift", "heavy_3", 3L, NA, NA
 )
 
 latest_data <- cbind(date = as.Date(date), latest_lifts)
