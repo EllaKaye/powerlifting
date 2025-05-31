@@ -4,7 +4,12 @@ library(ragg)
 source("powerlifting_helpers.R")
 
 # TODO: update date
-date <- "2025-05-18"
+date <- "2025-06-01"
+
+# TODO: update start_date if needed
+# To keep track of effect of menstrual cycle on lifts
+start_date <- as.Date("2025-05-23")
+cycle_day <- as.numeric(as.Date(date) - start_date)
 
 # TODO: update weight and maybe reps and note
 # fmt: skip
@@ -30,8 +35,8 @@ latest_lifts <- tibble::tribble(
   "deadlift", "heavy_3", 3L, NA, NA
 )
 
-latest_data <- cbind(date = as.Date(date), latest_lifts)
-previous_data <- read_csv("powerlifting_tracker.csv", col_types = "Dccidc")
+latest_data <- cbind(date = as.Date(date), latest_lifts, cycle_day = cycle_day)
+previous_data <- read_csv("powerlifting_tracker.csv", col_types = "Dccidci")
 lifting_data <- rbind(previous_data, latest_data)
 
 # append latest data to csv
