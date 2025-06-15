@@ -917,3 +917,21 @@ date,lift,set,reps,weight,note,cycle_day
 2025-06-01,deadlift,heavy_1,3,75,up,9
 2025-06-01,deadlift,heavy_2,3,80,felt good!,9
 2025-06-01,deadlift,heavy_3,3,,,9
+2025-06-15,squat,bar,10,20,,23
+2025-06-15,squat,light,8,40,,23
+2025-06-15,squat,medium,6,55,,23
+2025-06-15,squat,heavy_1,3,65,,23
+2025-06-15,squat,heavy_2,3,65,,23
+2025-06-15,squat,heavy_3,3,65,"weight OK, but still not completely consistent on depth",23
+2025-06-15,benchpress,bar,10,20,,23
+2025-06-15,benchpress,light,8,27.5,,23
+2025-06-15,benchpress,medium,6,32.5,,23
+2025-06-15,benchpress,heavy_1,3,37.5,,23
+2025-06-15,benchpress,heavy_2,3,37.5,,23
+2025-06-15,benchpress,heavy_3,2,37.5,,23
+2025-06-15,deadlift,bar,10,,,23
+2025-06-15,deadlift,light,8,50,,23
+2025-06-15,deadlift,medium,6,65,,23
+2025-06-15,deadlift,heavy_1,3,80,up,23
+2025-06-15,deadlift,heavy_2,3,80,felt good!,23
+2025-06-15,deadlift,heavy_3,3,80,pb for sets/reps,23
