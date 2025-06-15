@@ -56,3 +56,14 @@ system("git push")
 
 # check
 usethis::browse_github()
+
+# total weight
+total_weight <- lifting_data |>
+  filter(!(set %in% c("one_rep", "two_rep", "heavy_4"))) |>
+  filter(!is.na(weight)) |>
+  filter(date != as.Date("2024-11-14")) |> # PT session is different
+  filter(date != as.Date("2024-12-11")) |> # PT session is different
+  summarise(total = sum(weight), .by = date)
+
+total_weight |>
+  arrange(desc(total))
