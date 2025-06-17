@@ -8,7 +8,7 @@ date <- "2025-06-15"
 
 # TODO: update start_date if needed
 # To keep track of effect of menstrual cycle on lifts
-start_date <- as.Date("2025-05-23")
+start_date <- as.Date("2025-06-17")
 cycle_day <- as.numeric(as.Date(date) - start_date)
 
 # TODO: update weight and maybe reps and note
@@ -63,7 +63,7 @@ total_weight <- lifting_data |>
   filter(!is.na(weight)) |>
   filter(date != as.Date("2024-11-14")) |> # PT session is different
   filter(date != as.Date("2024-12-11")) |> # PT session is different
-  summarise(total = sum(weight), .by = date)
+  summarise(total = sum(reps * weight), .by = date)
 
 total_weight |>
   arrange(desc(total))
