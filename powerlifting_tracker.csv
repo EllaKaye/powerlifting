@@ -935,3 +935,21 @@ date,lift,set,reps,weight,note,cycle_day
 2025-06-15,deadlift,heavy_1,3,80,up,23
 2025-06-15,deadlift,heavy_2,3,80,felt good!,23
 2025-06-15,deadlift,heavy_3,3,80,pb for sets/reps,23
+2025-06-22,squat,bar,10,20,,5
+2025-06-22,squat,light,8,40,,5
+2025-06-22,squat,medium,6,55,,5
+2025-06-22,squat,heavy_1,3,65,,5
+2025-06-22,squat,heavy_2,3,65,,5
+2025-06-22,squat,heavy_3,3,65,Still not consistent on depth - confidence rather than weight,5
+2025-06-22,benchpress,bar,10,20,,5
+2025-06-22,benchpress,light,8,29,,5
+2025-06-22,benchpress,medium,6,34,,5
+2025-06-22,benchpress,heavy_1,3,38.5,,5
+2025-06-22,benchpress,heavy_2,3,38.5,,5
+2025-06-22,benchpress,heavy_3,3,,,5
+2025-06-22,deadlift,bar,10,,,5
+2025-06-22,deadlift,light,8,50,,5
+2025-06-22,deadlift,medium,6,65,,5
+2025-06-22,deadlift,heavy_1,3,80,up,5
+2025-06-22,deadlift,heavy_2,3,80,felt good!,5
+2025-06-22,deadlift,heavy_3,3,80,"smooth, hard work",5
