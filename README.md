@@ -28,7 +28,7 @@ The 2025-05-23 one-rep max session was a disappointment.
 I thought I'd be able to lift heavier, but wasn't having a good day.
 This, however, has spurred me on, and following this I decided to make yet another push to improve.
 Since then, I've been training one extra time a week, doing the three lifts with a friend who is also getting into strength training.
-In this sessions, I do one set of 10 reps at bar weight, one set of 8 reps at light weight, 
+In these sessions, I do one set of 10 reps at bar weight, one set of 8 reps at light weight, 
 and three sets of 5 reps at somewhere between my medium/heavy weight. 
 At the time of writing this, I've been doing this three weeks, 
 and am already feeling like it's making a difference, both to my strength and confidence.
