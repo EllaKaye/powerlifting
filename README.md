@@ -6,7 +6,7 @@ Around September 2024, I decided to make a concerted effort to improve.
 I go once a week to powerlifting class, where we generally do the same lifts/sets/reps every time (though sometimes skip a set depending on timing and how I'm feeling that day, and sometimes the 2nd and/or 3rd heavy set may only be one or two reps, depending on if I'm pushing my weights).
 It's been really gratifying to see my improvement.
 
-Note that on the plot, the points are plotting from bar to heavy 3, 
+Note that on the plot, the points are plotted from bar up to heavy 3, 
 so that if multiple sets are done at the same weight, only the colour of the last set shows, 
 e.g. if only a pink point is shown for heavy 3, that means that I did all three heavy sets at that same weight.
 
