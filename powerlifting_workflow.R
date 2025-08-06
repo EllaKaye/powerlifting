@@ -4,35 +4,35 @@ library(ragg)
 source("powerlifting_helpers.R")
 
 # TODO: update date
-date <- "2025-06-29"
+date <- "2025-08-06"
 
 # TODO: update start_date if needed
 # To keep track of effect of menstrual cycle on lifts
-start_date <- as.Date("2025-06-17")
-cycle_day <- as.numeric(as.Date(date) - start_date)
+start_date <- as.Date("2025-08-06")
+cycle_day <- as.numeric(as.Date(date) - start_date) + 1
 
 # TODO: update weight and maybe reps and note
 # fmt: skip
 latest_lifts <- tibble::tribble(
   ~lift, ~set, ~reps, ~weight, ~note,
-  "squat", "bar", 10L, 20, NA, 
-  "squat", "light", 8L, 40, NA, 
-  "squat", "medium", 6L, 55, NA, 
-  "squat", "heavy_1", 3L, 65, "weight good, depth good reps 1 and 3 just sjy on rep 2",
-  "squat", "heavy_2", 1L, 65, "hurt back and stopped",
-  "squat", "heavy_3", 3L, NA, NA,
+  "squat", "bar", 10L, 20, "correct technique - no anterior tilt", 
+  "squat", "light", 8L, 25, NA, 
+  "squat", "medium", 6L, 30, NA, 
+  "squat", "heavy_1", 3L, 35, NA,
+  "squat", "heavy_2", 1L, 40, NA,
+  "squat", "heavy_3", 3L, 40, NA,
   "benchpress", "bar", 10L, 20, NA, 
-  "benchpress", "light", 8L, 30, "up", 
-  "benchpress", "medium", 6L, 35, "up", 
-  "benchpress", "heavy_1", 3L, 39, "very smooth",
-  "benchpress", "heavy_2", 3L, 40, "p.b. slight push on last rep but feeling good",
-  "benchpress", "heavy_3", 3L, 42, "p.b. first 2 smooth, last rep a struggle but it went!",
-  "deadlift", "bar", 10L, NA, "did deadlift first today", 
-  "deadlift", "light", 8L, 50, NA, 
-  "deadlift", "medium", 6L, 65, NA, 
-  "deadlift", "heavy_1", 3L, 80, NA,
-  "deadlift", "heavy_2", 3L, 80, NA,
-  "deadlift", "heavy_3", 3L, 82.5, "absolutely fine - could have gone 85kg. p.b. reps at weight."
+  "benchpress", "light", 8L, 27.5, NA, 
+  "benchpress", "medium", 6L, 32.5, NA, 
+  "benchpress", "heavy_1", 3L, 35, NA,
+  "benchpress", "heavy_2", 3L, 37.5, NA,
+  "benchpress", "heavy_3", 2L, 40, NA,
+  "deadlift", "bar", 10L, 30, NA, 
+  "deadlift", "light", 8L, 40, "felt like hard work", 
+  "deadlift", "medium", 6L, 50, NA, 
+  "deadlift", "heavy_1", 3L, 60, NA,
+  "deadlift", "heavy_2", 3L, 60, NA,
+  "deadlift", "heavy_3", 3L, 60, NA
 )
 
 latest_data <- cbind(date = as.Date(date), latest_lifts, cycle_day = cycle_day)
