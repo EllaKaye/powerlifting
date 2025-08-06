@@ -15,7 +15,7 @@ Around **September 2024**, I decided to make a concerted effort to improve.
 I go once a week to powerlifting class, where we generally do the same lifts/sets/reps every time (though sometimes skip a set depending on timing and how I'm feeling that day, and sometimes the 2nd and/or 3rd heavy set may only be one or two reps, depending on if I'm pushing my weights).
 It's been really gratifying to see my improvement.
 
-At the end of **June 2025** I injured my back on a heavy squar and had to take a break for a month then work my way back up.
+At the end of **June 2025** I injured my back on a heavy squat and had to take a break for a month then work my way back up.
 
 ## One-rep max
 
