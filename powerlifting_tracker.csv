@@ -989,3 +989,21 @@ date,lift,set,reps,weight,note,cycle_day
 2025-08-06,deadlift,heavy_1,3,60,,1
 2025-08-06,deadlift,heavy_2,3,60,,1
 2025-08-06,deadlift,heavy_3,3,60,,1
+2025-08-13,squat,bar,10,20,correct technique - no anterior tilt,8
+2025-08-13,squat,light,8,25,,8
+2025-08-13,squat,medium,6,32.5,,8
+2025-08-13,squat,heavy_1,3,40,,8
+2025-08-13,squat,heavy_2,3,40,,8
+2025-08-13,squat,heavy_3,3,45,,8
+2025-08-13,benchpress,bar,10,20,,8
+2025-08-13,benchpress,light,8,30,,8
+2025-08-13,benchpress,medium,6,35,,8
+2025-08-13,benchpress,heavy_1,3,40,,8
+2025-08-13,benchpress,heavy_2,3,40,last rep a struggle,8
+2025-08-13,benchpress,heavy_3,3,40,last rep a struggle,8
+2025-08-13,deadlift,bar,10,,,8
+2025-08-13,deadlift,light,8,40,felt good,8
+2025-08-13,deadlift,medium,6,50,,8
+2025-08-13,deadlift,heavy_1,3,60,,8
+2025-08-13,deadlift,heavy_2,3,60,,8
+2025-08-13,deadlift,heavy_3,3,65,"OK, but enough for now",8
