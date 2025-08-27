@@ -1025,3 +1025,21 @@ date,lift,set,reps,weight,note,cycle_day
 2025-08-20,deadlift,heavy_1,3,60,,15
 2025-08-20,deadlift,heavy_2,3,65,,15
 2025-08-20,deadlift,heavy_3,3,70,felt good,15
+2025-08-27,squat,bar,10,20,,22
+2025-08-27,squat,light,8,35,,22
+2025-08-27,squat,medium,6,45,,22
+2025-08-27,squat,heavy_1,3,55,,22
+2025-08-27,squat,heavy_2,3,55,,22
+2025-08-27,squat,heavy_3,3,55,,22
+2025-08-27,benchpress,bar,10,20,,22
+2025-08-27,benchpress,light,8,30,,22
+2025-08-27,benchpress,medium,6,35,,22
+2025-08-27,benchpress,heavy_1,3,40,not as easy as last week,22
+2025-08-27,benchpress,heavy_2,2,42.5,failed 3rd rep,22
+2025-08-27,benchpress,heavy_3,2,42.5,failed 3rd rep,22
+2025-08-27,deadlift,bar,10,,,22
+2025-08-27,deadlift,light,8,45,felt good,22
+2025-08-27,deadlift,medium,6,55,,22
+2025-08-27,deadlift,heavy_1,3,65,,22
+2025-08-27,deadlift,heavy_2,3,70,,22
+2025-08-27,deadlift,heavy_3,3,75,felt good,22
