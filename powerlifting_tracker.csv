@@ -1043,3 +1043,21 @@ date,lift,set,reps,weight,note,cycle_day
 2025-08-27,deadlift,heavy_1,3,65,,22
 2025-08-27,deadlift,heavy_2,3,70,,22
 2025-08-27,deadlift,heavy_3,3,75,felt good,22
+2025-09-03,squat,bar,10,20,,4
+2025-09-03,squat,light,8,40,,4
+2025-09-03,squat,medium,6,50,,4
+2025-09-03,squat,heavy_1,3,60,,4
+2025-09-03,squat,heavy_2,3,60,,4
+2025-09-03,squat,heavy_3,3,60,"heavy but comfortable, depth good",4
+2025-09-03,benchpress,bar,10,20,,4
+2025-09-03,benchpress,light,8,30,easy,4
+2025-09-03,benchpress,medium,6,35,easy,4
+2025-09-03,benchpress,heavy_1,3,40,not so easy!,4
+2025-09-03,benchpress,heavy_2,2,42.5,,4
+2025-09-03,benchpress,heavy_3,2,,,4
+2025-09-03,deadlift,bar,10,,,4
+2025-09-03,deadlift,light,8,50,felt good,4
+2025-09-03,deadlift,medium,6,60,,4
+2025-09-03,deadlift,heavy_1,3,70,easy,4
+2025-09-03,deadlift,heavy_2,3,75,completely fine,4
+2025-09-03,deadlift,heavy_3,3,80,good,4
