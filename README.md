@@ -17,6 +17,15 @@ It's been really gratifying to see my improvement.
 
 At the end of **June 2025** I injured my back on a heavy squat and had to take a break for a month then work my way back up.
 
+From **September 2025** my schedule changed, and it is now difficult for me to get to powerlifting classes.
+This will likely remain the case for the next year. 
+I might make it once a month. 
+In the meantime, I will go to one or two strength classes a week at the gym.
+I am also, along with a couple of friends, following a block periodisation programme for the year,
+and we're working out once a week in the gym area of our fantastic local bouldering centre, [Gallery Bouldering](https://gallerybouldering.co.uk).
+Because we're changing sets, reps and weights each week, it's trickier to plot than the classes.
+The programme, and my progress, is in [block_periodisation.csv](block_periodisation.csv).
+
 ## One-rep max
 
 I have had a couple of PT sessions to figure out my one-rep max on each of the lifts,
