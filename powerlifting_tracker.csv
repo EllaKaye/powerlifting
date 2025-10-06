@@ -1061,3 +1061,21 @@ date,lift,set,reps,weight,note,cycle_day
 2025-09-03,deadlift,heavy_1,3,70,easy,4
 2025-09-03,deadlift,heavy_2,3,75,completely fine,4
 2025-09-03,deadlift,heavy_3,3,80,good,4
+2025-10-05,squat,bar,10,20,,11
+2025-10-05,squat,light,8,40,,11
+2025-10-05,squat,medium,6,50,,11
+2025-10-05,squat,heavy_1,3,60,,11
+2025-10-05,squat,heavy_2,3,60,,11
+2025-10-05,squat,heavy_3,3,65,box,11
+2025-10-05,benchpress,bar,10,20,,11
+2025-10-05,benchpress,light,8,,skipped as though might go for pb,11
+2025-10-05,benchpress,medium,6,30,easy,11
+2025-10-05,benchpress,heavy_1,3,40,not so easy!,11
+2025-10-05,benchpress,heavy_2,1,42.5,"first rep smooth but failed second rep, was close though!",11
+2025-10-05,benchpress,heavy_3,1,42,"first rep smooth but failed second rep, was close though!",11
+2025-10-05,deadlift,bar,10,,,11
+2025-10-05,deadlift,light,8,40,go lighter to leave something in tank for heavy,11
+2025-10-05,deadlift,medium,6,60,,11
+2025-10-05,deadlift,heavy_1,1,70,easy,11
+2025-10-05,deadlift,heavy_2,3,80,,11
+2025-10-05,deadlift,heavy_3,3,80,hard but good,11
