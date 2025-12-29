@@ -1097,3 +1097,21 @@ date,lift,set,reps,weight,note,cycle_day
 2025-10-29,deadlift,heavy_1,1,70,easy,10
 2025-10-29,deadlift,heavy_2,3,80,fine,10
 2025-10-29,deadlift,heavy_3,3,85,pb reps at this weight!,10
+2025-12-07,squat,bar,10,20,,25
+2025-12-07,squat,light,8,40,,25
+2025-12-07,squat,medium,6,50,,25
+2025-12-07,squat,heavy_1,3,60,,25
+2025-12-07,squat,heavy_2,3,65,,25
+2025-12-07,squat,heavy_3,3,65,,25
+2025-12-07,benchpress,bar,10,20,,25
+2025-12-07,benchpress,light,8,30,,25
+2025-12-07,benchpress,medium,6,35,feeling heavy,25
+2025-12-07,benchpress,heavy_1,2,40,,25
+2025-12-07,benchpress,heavy_2,2,40,,25
+2025-12-07,benchpress,heavy_3,2,,,25
+2025-12-07,deadlift,bar,10,,,25
+2025-12-07,deadlift,light,8,40,,25
+2025-12-07,deadlift,medium,6,60,,25
+2025-12-07,deadlift,heavy_1,3,80,weight fine but tweaked back on final rep and didn't want to risk further,25
+2025-12-07,deadlift,heavy_2,3,,,25
+2025-12-07,deadlift,heavy_3,3,,,25

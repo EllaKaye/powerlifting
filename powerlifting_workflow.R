@@ -4,11 +4,11 @@ library(ragg)
 source("powerlifting_helpers.R")
 
 # TODO: update date
-date <- "2025-10-29"
+date <- "2025-12-07"
 
 # TODO: update start_date if needed
 # To keep track of effect of menstrual cycle on lifts
-start_date <- as.Date("2025-10-20")
+start_date <- as.Date("2025-11-13")
 cycle_day <- as.numeric(as.Date(date) - start_date) + 1
 
 # TODO: update weight and maybe reps and note
@@ -16,23 +16,23 @@ cycle_day <- as.numeric(as.Date(date) - start_date) + 1
 latest_lifts <- tibble::tribble(
   ~lift, ~set, ~reps, ~weight, ~note,
   "squat", "bar", 10L, 20, NA, 
-  "squat", "light", 8L, 35, NA, 
-  "squat", "medium", 6L, 45, NA, 
-  "squat", "heavy_1", 3L, 55, NA,
-  "squat", "heavy_2", 3L, 60, NA,
+  "squat", "light", 8L, 40, NA, 
+  "squat", "medium", 6L, 50, NA, 
+  "squat", "heavy_1", 3L, 60, NA,
+  "squat", "heavy_2", 3L, 65, NA,
   "squat", "heavy_3", 3L, 65, NA,
   "benchpress", "bar", 10L, 20, NA, 
   "benchpress", "light", 8L, 30, NA, 
-  "benchpress", "medium", 6L, 35, NA, 
-  "benchpress", "heavy_1", 3L, 37.5, "easy!",
-  "benchpress", "heavy_2", 3L, 40, "fine",
-  "benchpress", "heavy_3", 2L, 42, "really good! probably could have got 3 reps if I'd set my mind to it in advance",
+  "benchpress", "medium", 6L, 35, "feeling heavy", 
+  "benchpress", "heavy_1", 2L, 40, NA,
+  "benchpress", "heavy_2", 2L, 40, NA,
+  "benchpress", "heavy_3", 2L, NA, NA,
   "deadlift", "bar", 10L, NA, NA, 
-  "deadlift", "light", 8L, 40, "go lighter to leave something in tank for heavy", 
+  "deadlift", "light", 8L, 40, NA, 
   "deadlift", "medium", 6L, 60, NA, 
-  "deadlift", "heavy_1", 1L, 70, "easy",
-  "deadlift", "heavy_2", 3L, 80, "fine",
-  "deadlift", "heavy_3", 3L, 85, "pb reps at this weight!"
+  "deadlift", "heavy_1", 3L, 80, "weight fine but tweaked back on final rep and didn't want to risk further",
+  "deadlift", "heavy_2", 3L, NA, NA,
+  "deadlift", "heavy_3", 3L, NA, NA
 )
 
 latest_data <- cbind(date = as.Date(date), latest_lifts, cycle_day = cycle_day)
