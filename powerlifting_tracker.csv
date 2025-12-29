@@ -1115,3 +1115,21 @@ date,lift,set,reps,weight,note,cycle_day
 2025-12-07,deadlift,heavy_1,3,80,weight fine but tweaked back on final rep and didn't want to risk further,25
 2025-12-07,deadlift,heavy_2,3,,,25
 2025-12-07,deadlift,heavy_3,3,,,25
+2025-12-17,squat,bar,10,20,,10
+2025-12-17,squat,light,8,40,,10
+2025-12-17,squat,medium,6,50,,10
+2025-12-17,squat,heavy_1,3,60,,10
+2025-12-17,squat,heavy_2,3,65,missed depth on first couple of reps but weight felt OK,10
+2025-12-17,squat,heavy_3,3,67.5,"missed depth by a cm or two, but the weight felt manageable",10
+2025-12-17,benchpress,bar,10,20,,10
+2025-12-17,benchpress,light,8,30,,10
+2025-12-17,benchpress,medium,6,35,,10
+2025-12-17,benchpress,heavy_1,3,40,block,10
+2025-12-17,benchpress,heavy_2,3,40,block,10
+2025-12-17,benchpress,heavy_3,3,40,block,10
+2025-12-17,deadlift,bar,10,,,10
+2025-12-17,deadlift,light,8,40,,10
+2025-12-17,deadlift,medium,6,60,,10
+2025-12-17,deadlift,heavy_1,3,80,,10
+2025-12-17,deadlift,heavy_2,2,85,,10
+2025-12-17,deadlift,heavy_3,3,85,yes!,10
